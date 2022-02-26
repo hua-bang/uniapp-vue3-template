@@ -1,0 +1,22 @@
+{
+  "eslint.alwaysShowStatus": true,
+  "editor.formatOnType": true,
+  "editor.formatOnSave": true,
+  "eslint.codeAction.showDocumentation": {
+    "enable": true
+  },
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true,
+  },
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    "html",
+    "vue"
+  ],
+  "prettier.printWidth": 120,
+  "cSpell.words": [
+    "uniapp",
+    "vite"
+  ]
+}
