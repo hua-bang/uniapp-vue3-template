@@ -1,0 +1,1 @@
+<view class="content"><image class="logo" src="/static/logo.png"/><view class="text-area"><text class="title">{{a}}</text> {{b}}</view><count u-i="24f927a6-0" bind:__l="__l"/></view>
