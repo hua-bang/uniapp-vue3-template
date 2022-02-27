@@ -18,7 +18,7 @@ import { onMounted } from 'vue';
 import { homeApiDemo } from '../../api/home';
 
 onMounted(() => {
-	homeApiDemo();
+  homeApiDemo();
 });
 
 const msg: string = '东莞理工学院2022年校庆';
