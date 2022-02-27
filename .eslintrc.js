@@ -4,14 +4,15 @@ module.exports = {
 		node: true,
 		es6: true
 	},
-	parserOptions: {
-		parser: 'babel-eslint',
-		sourceType: 'module'
-	},
-	parser: 'vue-eslint-parser',
-	extends: [  
+	parser: 'vue-eslint-parser', // 解析 .vue 文件
+	extends: [
+		'plugin:@typescript-eslint/recommended',
 		'plugin:vue/recommended'
-	],  
+	],
+	plugins: ['@typescript-eslint'],
+	parserOptions: {
+		parser: '@typescript-eslint/parser' // 解析 .ts 文件
+	},
 	rules: {   
 		'indent': [2, 'tab'],
 		'quotes': [1, 'single'],
@@ -19,6 +20,7 @@ module.exports = {
 		'no-empty': 2,
 		'eqeqeq': 2,
 		'max-depth': [0, 4],
-		'max-len': [1, 120]
+		'max-len': [1, 120],
+		'@typescript-eslint/no-inferrable-types': 'off' 
 	}  
 };

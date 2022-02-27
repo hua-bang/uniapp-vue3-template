@@ -1,22 +1,28 @@
 <template>
-  <view class="content">
-    <image 
-      class="logo" 
-      src="/static/logo.png" 
-    />
-    <view>
-      校庆
+  <div>
+    <view class="content">
+      <image 
+        class="logo" 
+        src="/static/logo.png" 
+      />
+      <view>
+        {{ msg }}
+      </view>
+      <!-- <Count /> -->
     </view>
-  </view>
+  </div>
 </template>
 
 <script lang="ts" setup>
-import { ref } from 'vue';
-import Count from '../../components/Count.vue';
+import { onMounted } from 'vue';
+import { homeApiDemo } from '../../api/home';
 
-const num: number = 231;
-const title: string = 'hello';
+onMounted(() => {
+	homeApiDemo();
+});
 
+const msg: string = '东莞理工学院2022年校庆';
+const num = 123;
 </script>
 
 <style>

@@ -10,7 +10,7 @@
   },
   "eslint.validate": [
     "javascript",
-    "javascriptreact",
+    "typescript",
     "html",
     "vue"
   ],

@@ -54,8 +54,9 @@
     "@dcloudio/uni-automator": "^3.0.0-alpha-3031220220222002",
     "@dcloudio/uni-cli-shared": "^3.0.0-alpha-3031220220222002",
     "@dcloudio/vite-plugin-uni": "^3.0.0-alpha-3031220220222002",
+    "@typescript-eslint/eslint-plugin": "^5.12.1",
+    "@typescript-eslint/parser": "^5.12.1",
     "autoprefixer": "^10.4.2",
-    "babel-eslint": "^10.1.0",
     "eslint-config-standard": "^16.0.3",
     "eslint-plugin-html": "^6.2.0",
     "eslint-plugin-import": "^2.25.4",
@@ -63,7 +64,7 @@
     "eslint-plugin-promise": "^5.2.0",
     "eslint-plugin-standard": "^5.0.0",
     "eslint-plugin-vue": "^8.5.0",
-    "typescript": "^4.5.2",
+    "typescript": "^4.5.5",
     "vite": "^2.8.4"
   }
 }

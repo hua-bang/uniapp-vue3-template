@@ -7,7 +7,7 @@ onShow(() => {
 	console.log('lint');
 });
 onHide(() => {
-	console.log('App Hide');
+	console.log('App Hide！!!');
 });
 </script>
 <style></style>
