@@ -30,7 +30,8 @@
     "build:quickapp-webview": "uni build -p quickapp-webview",
     "build:quickapp-webview-huawei": "uni build -p quickapp-webview-huawei",
     "build:quickapp-webview-union": "uni build -p quickapp-webview-union",
-    "commit": "git-cz"
+    "commit": "git-cz",
+    "precommit": "lint-staged"
   },
   "dependencies": {
     "@dcloudio/uni-app": "^3.0.0-alpha-3031220220222002",
@@ -68,8 +69,21 @@
     "eslint-plugin-promise": "^5.2.0",
     "eslint-plugin-standard": "^5.0.0",
     "eslint-plugin-vue": "^8.5.0",
+    "husky": "^7.0.4",
+    "lint-staged": "^12.3.4",
     "typescript": "^4.5.5",
-    "vite": "^2.8.4"
+    "vite": "^2.8.4",
+    "yorkie": "^2.0.0"
+  },
+  "prettier": {
+    "semi": true,
+    "singleQuote": true
+  },
+  "lint-staged": {
+    "src/**/*.{ts,vue,js}": [
+      "prettier --write",
+      "git add"
+    ]
   },
   "config": {
     "commitizen": {
