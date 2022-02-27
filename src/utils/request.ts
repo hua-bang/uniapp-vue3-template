@@ -6,7 +6,7 @@ import {
 
 type RequestConfig = Omit<UniApp.RequestOptions, 'success' | 'fail' | 'complete'>;
 type ResponseResult<T> = Omit<UniApp.RequestSuccessCallbackResult, 'data'> & {
-	data: T
+  data: T
 };
 
 const defaultRequestOptions: Partial<RequestConfig> = {
