@@ -1,12 +1,12 @@
 import { BASE_URL, TOKEN_NAME } from '../config/network';
-import {
-  isCompleteUrl,
-  getLocalStorageValueByKey
-} from './common';
+import { isCompleteUrl, getLocalStorageValueByKey } from './common';
 
-type RequestConfig = Omit<UniApp.RequestOptions, 'success' | 'fail' | 'complete'>;
+type RequestConfig = Omit<
+  UniApp.RequestOptions,
+  'success' | 'fail' | 'complete'
+>;
 type ResponseResult<T> = Omit<UniApp.RequestSuccessCallbackResult, 'data'> & {
-  data: T
+  data: T;
 };
 
 const defaultRequestOptions: Partial<RequestConfig> = {
@@ -15,14 +15,9 @@ const defaultRequestOptions: Partial<RequestConfig> = {
 };
 
 function request<T>(option: RequestConfig): Promise<ResponseResult<T>> {
-  const {
-    url,
-    header,
-    ...restOption
-  } = option;
+  const { url, header, ...restOption } = option;
 
   return new Promise((resolve, reject) => {
-
     const successHandler = (res: UniApp.RequestSuccessCallbackResult) => {
       resolve(res as ResponseResult<T>);
     };
@@ -31,16 +26,16 @@ function request<T>(option: RequestConfig): Promise<ResponseResult<T>> {
       reject(err);
     };
 
-    const processHeader = (header: RequestConfig['header']): RequestConfig['header'] => {
+    const processHeader = (
+      header: RequestConfig['header']
+    ): RequestConfig['header'] => {
       // const token = getLocalStorageValueByKey(TOKEN_NAME);
       // TODO: handle the header before request
       return header;
     };
 
-    processHeader(header);
-
     uni.request({
-      url: isCompleteUrl(url) ? url : (BASE_URL + url),
+      url: isCompleteUrl(url) ? url : BASE_URL + url,
       header: processHeader(header),
       success: successHandler,
       fail: failHandler,
