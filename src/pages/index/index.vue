@@ -4,12 +4,9 @@
       class="logo" 
       src="/static/logo.png" 
     />
-    <view class="text-area">
-      <text class="title">
-        {{ title }}
-      </text>
+    <view>
+      校庆
     </view>
-    <Count />
   </view>
 </template>
 
